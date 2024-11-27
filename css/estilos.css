@@ -1,0 +1,436 @@
+/* Celeste claro - #F0FEFF
+    Azul oscuro - #0D2C5D
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "lato", sans-serif;
+ }
+
+
+/* ESTILOS BOTONERA */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;
+    background-color:#F0FEFF ;
+    margin-bottom: 3%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 1);
+}
+ul.navbar-nav li  {
+  width: 17vw;
+}
+.nav-item {
+    text-decoration: none;
+    font-family: 'Courier sNew', Courier, monospace;
+    font-size: 20px;
+    border-radius: 5px;
+    display: inline-block; /* Asegura que el tamaño del botón no cambie */
+    transition: transform 0.3s, background-color 0.3s; /* Añade una transición para suavizar los cambios */
+}
+
+.nav-item, .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px; /* Espacio entre el logo y los botones */
+}
+
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: transparent; /* Fondo inicial */
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    padding: 3%;
+}
+
+@media (max-width: 960px) {
+  .button {
+    padding: 2% !important;
+  }
+}
+
+.button:hover {
+    transform: scale(1.0); /* Agranda el botón ligeramente al hacer hover */
+    background-color: rgb(88, 161, 157); /* Cambia el color de fondo */
+    color: aliceblue;
+    cursor: pointer;
+}
+/* FIN BOTONERA */
+
+/* ESTILOS INICIO */
+.uno{
+  padding-top: 2%;
+  padding-bottom: 3%;
+  padding-left: 2%;
+  color: rgb(66, 67, 68);
+}
+.dos{
+  padding-top: 8%;
+  padding-left: 2%;
+  padding-bottom: 3%;
+  margin-right: 5px;
+  color: rgb(66, 67, 68);
+}
+figcaption {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 3px;
+  text-align: center;
+  padding-left: 2%;
+  display: flex;
+  max-width: 500px;
+  float: center;
+}
+.textito{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: #0D2C5D;
+}
+.textito1{
+  margin-left: 2%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: #0D2C5D;
+}
+.foto1{
+  margin-left: 2%;
+}
+.foto2{
+  margin-right: 2%;
+}
+.uno{
+  margin-left: 2%;
+}
+.paddingfoto0 {
+  padding: 0px !important;
+}
+/* FIN INICIO */
+
+/* ESTILOS PROCESO */
+
+h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* acomoda las imagenes */
+.card{
+  width: 55%;
+  height: 350px;
+  aspect-ratio: 1/ 0.7;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hace que las img se vean mas lindas */
+.card .image-box{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* hace que la transicion funcione y que todo se mantenga en su lugar */
+.card .image-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+/* hace que aparezca y deaparexca el texto */
+.content h2{
+  opacity: 0;
+  transition: 0.4s, 0.2s ease;
+}
+ /* hace que se vea mas fluido cuando aparece el texto */
+.content h2{
+  margin-bottom: 12px;
+  scale: 0.7;
+  color: #0d2c5d;
+  font-family: 'Courier New', Courier, monospace;
+}
+/*  hace que aparezca el titulo*/
+.card:hover .content h2{
+  scale: 1;
+  opacity: 1;
+}
+
+/* hace que aparezca elmarco al rededor de la img */
+.card::after{
+  content: "";
+  position:absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* hace que el fondo se vea "nublado" cuando el cursor esta arriba, tambien controla el brillo del filtro */
+.card:hover img{
+  filter: grayscale(0.5) brightness(1);
+}
+
+/* controla la opacidad del fondo */
+.card:hover::after{
+  opacity: 0.5;
+  inset: 20px;
+}
+
+/* hace que el contenido se mantega dentro de la img */
+.content{
+  width: 80%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gal{
+  margin-right: 2%;
+  margin-bottom: 7%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction:row ;
+  justify-content: center;
+}
+.gal article{
+  margin-left: 3%;
+  border-radius: 1%;
+  justify-content: center;
+
+}
+
+
+/* animacion para que las img se agranden cuando pasas por encima*/
+.gal img:hover{
+  transform: scale(1.1);
+  transition: all .2s;
+}
+/* fin animacion */
+/* FIN PROCESO */
+
+
+
+/* ESTILOS CONTACTO */
+.contacth1{
+  color: #0D2C5D;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+#formulario{
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+#mapa2{
+display: flex;
+justify-content:space-evenly;
+margin-top: 5%;
+margin-bottom: 5%;
+}
+/* inicio del formulario  */
+
+
+
+/* centra todo y corrige altura */
+.signupFrm {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: auto;
+}
+
+/* colores , medidas, padding, márgenes y fuente */
+.form {
+ background-color: white;
+ width: 400px;
+ border-radius: 8px;
+ padding: 20px 40px;
+ box-shadow: 0 10px 25px rgba(50, 65, 80, 0.2);
+ font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  color: #0d2c5d;
+ font-size: 45px;
+ margin-bottom: 50px;
+ font-family: 'Courier New', Courier, monospace;
+}
+
+/* estiliza el div de las entradas del formulario */
+.inputContainer {
+ position: relative;
+ height: 45px;
+ width: 90%;
+ margin-bottom: 17px;
+}
+/* listo */
+
+/*hace que la casilla se quede cuando se mueva el texto */
+.input {
+ position: absolute; 
+ top: 0px;
+ left: 0px;
+ height: 100%;
+ width: 100%;
+ border: 1px solid #DADCE0;
+ border-radius: 7px;
+ font-size: 16px;
+ padding: 0 20px;
+ outline: none;
+ background: none;
+ z-index: 1;
+}
+/* listo */
+
+/*esconde el placeholder */
+
+::placeholder {
+ color: transparent;
+}
+
+/*movimiento de texto */
+.label {
+ position: absolute; 
+ top: 15px; /* movimiento del texto*/
+ left: 15px; /* movimiento del texto*/
+ padding: 0 4px;
+ background-color: white;
+ color: #bcc1ca;
+ font-size: 16px;
+ transition: 0.5s; /*cuanto tarda en moverse*/
+ z-index: 0; /*hace que se se quede "atrás" de otros elementos, es para que no se superponga*/ 
+}
+
+/* remarco de casilla seleccionada*/
+.input:focus {
+   border: 2px solid  #164ba1;
+ }
+
+/* boton de enviar  */
+.submitBtn {
+ font-family: 'Courier New', Courier, monospace;
+ display: block;
+ margin-left: auto;
+ padding: 15px 30px;
+ border: none;
+ background-color: #164ba1;
+ color: white;
+ border-radius: 6px;
+ cursor: pointer;
+ font-size: 16px;
+ margin-top: 30px;
+}
+
+/* animacion boton de enviar */
+
+.submitBtn:hover {
+ background-color: #0D2C5D;
+ transform: translateY(-2px); /*hace que el boton cambie de color cuando se pasa por encima*/
+} 
+
+/* fin */
+
+/* para que se cuando se escriba el nombre de la casilla cambie de color y se ponga en negrita */
+.input:focus + .label {
+   top: -7px; /*para que suba*/
+   left: 3px;
+   z-index: 10;
+   font-size: 14px;
+   font-weight: 600;
+   color: #0064AE ;
+ }
+/* fin */
+
+ /* para que no choque el texto por el usuario y el nombre de la casilla */
+ .input:not(:placeholder-shown)+ .label {
+   top: -7px;
+   left: 3px;
+   z-index: 10;
+   font-size: 14px;
+   font-weight: 600;
+ }
+ .svgrobot{
+  float: right;
+  width: 400px;
+  height: 400px;
+ }
+/* FIN CONTACTO */
+
+/* FOOTER */
+
+/* Correcciones generales del footer */
+
+.Correcion1 {
+    background-color: #f5f2f2;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2%;
+}
+
+.CorrecionLogo {
+    width: 15%;
+    height: 15%;
+}
+
+/* Animacion para el boton */
+.ov-btn-grow-box {
+    color: #56595c; /* color de fuente */
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.ov-btn-grow-box:hover {
+    color:#f5f2f2 /*Color de la letra*/
+
+  }
+  .ov-btn-grow-box::after {
+    content: "";
+    background: #0D2C5D; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+    transition: all 0.3s ease;
+  }
+  .ov-btn-grow-box:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1);
+  }
+/* FIN FOOTER */
+
